@@ -2,7 +2,9 @@ import React from "react";
 import logo from "./logo.svg";
 import "./App.css";
 import Header from "./components/Header.js";
-import Lend from "./components/Lend.js";
+import PoolStats from "./components/Poolstats.js";
+import EstimatedPoolPrize from "./components/EstimatedPoolPrize.js";
+import Poolbutton from "./components/Poolbutton.js";
 
 function App() {
   return (
@@ -11,7 +13,9 @@ function App() {
         <Header />
       </header>
       <body>
-        <Lend />
+        <EstimatedPoolPrize />
+        <PoolStats />
+        <Poolbutton />
       </body>
     </div>
   );
