@@ -7,7 +7,7 @@ export default class Header extends React.Component {
       <div>
         <h1 className="firstpartoftitle">
           {" "}
-          🧙🏼‍♂️ Defi<p className="secondpartoftitle">nitelyNotGambling</p>
+          🧙🏼‍♂️ <p className="secondpartoftitle">DegenFinance</p>
         </h1>
       </div>
     );
