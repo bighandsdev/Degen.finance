@@ -1,0 +1,13 @@
+.container {
+  border-radius: 20px;
+  width: 400px;
+  height: 400px;
+  margin: auto;
+  border-color: beige;
+  border-width: 0.5px;
+  border-style: solid;
+  border-color: rgb(226, 207, 213);
+  border-image: initial;
+  border-radius: 12px;
+  background-color: #3a1e28;
+}
