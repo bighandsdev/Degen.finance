@@ -1,0 +1,44 @@
+.container {
+  border-radius: 20px;
+  width: fit-content;
+  height: fit-content;
+  padding: 50px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  margin: auto;
+  margin-top: 20px;
+  border-radius: 12px;
+  box-shadow: rgb(247, 242, 244) 1px 1px 0px inset;
+  font-size: 14px;
+  box-shadow: rgb(226, 207, 213) 3px 3px 6px,
+    rgb(247, 242, 244) -6px -6px 12px -1px;
+  background: rgb(240, 231, 234);
+  border-width: 0px;
+  border-style: solid;
+  border-color: rgb(226, 207, 213);
+}
+.flexbox {
+}
+.flexboxtext {
+  padding: 3px;
+}
+.flexboxnumber {
+  padding: 3px;
+
+  color: #d1004b;
+  font: 400 13.3333px Arial;
+  font-size: 35px;
+}
+#timeemoji {
+  font-size: 40px;
+  animation: spin 5s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

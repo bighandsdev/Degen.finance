@@ -5,9 +5,9 @@ export default class Header extends React.Component {
   render() {
     return (
       <div>
-        <h1 className="firstpartoftitle">
+        <h1 id="firstpartoftitle">
           {" "}
-          🧙🏼‍♂️ Defi<p className="secondpartoftitle">nitelyNotGambling</p>
+          🧙🏼‍♂️ <p id="secondpartoftitle">DegenFinance</p>
         </h1>
       </div>
     );
