@@ -1,0 +1,12 @@
+#ConnectWallet {
+  position: absolute;
+  top: 0;
+  right: 20px;
+  color: #651962;
+  font-family: "Nunito", sans-serif;
+  font-size: medium;
+  cursor: pointer;
+}
+#ConnectWallet:hover {
+  background-color: rgb(255, 249, 249);
+}

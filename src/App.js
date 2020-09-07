@@ -6,6 +6,7 @@ import PoolStats from "./components/Poolstats.js";
 import EstimatedPoolPrize from "./components/EstimatedPoolPrize.js";
 import Poolbutton from "./components/Poolbutton.js";
 import Web3 from "web3";
+import ConnectWallet from "./components/Connectwallet.js";
 
 class App extends React.Component {
   constructor(props) {
@@ -21,6 +22,7 @@ class App extends React.Component {
         <header className="App-header">
           <Header />
         </header>
+        <ConnectWallet />
         <body>
           <EstimatedPoolPrize />
           <PoolStats />
