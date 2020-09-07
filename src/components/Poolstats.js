@@ -15,7 +15,9 @@ export default class Lend extends React.Component {
   render() {
     return (
       <div className="container">
-        <h1 id="timeemoji">⏳</h1>
+        <div className="container2" id="timeemojidiv">
+          <h1 id="timeemoji">⏳</h1>
+        </div>
         <p>Time until next payout</p>
         <div className="flexbox">
           <tr>
