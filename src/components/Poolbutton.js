@@ -15,7 +15,7 @@ export default class Poolbutton extends React.Component {
   render() {
     if (typeof window.ethereum !== "undefined") {
       console.log("MetaMask is installed!");
-
+      window.ethereum.request({ method: "eth_requestAccounts" });
       // From now on, this should always be true:
       // provider === window.ethereum
       return (
