@@ -10,22 +10,12 @@ import ConnectWallet from "./components/Connectwallet.js";
 const web3 = new Web3(Web3.givenProvider);
 
 function App() {
-  const ethereum = window.ethereum;
-  const [addr, setAddr] = useState("");
-
-  function connectEthereumWallet() {
-    if (ethereum) {
-      ethereum.on("accountsChanged", function (accounts) {
-        setAddr(accounts[0]);
-      });
-    }
-  }
   return (
     <div className="App">
       <header className="App-header">
         <Header />
       </header>
-      <ConnectWallet address={addr} connect={connectEthereumWallet()} />
+      <ConnectWallet />
       <body>
         <EstimatedPoolPrize />
         <PoolStats />
