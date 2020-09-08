@@ -21,6 +21,31 @@ function App() {
     const account = accounts[0];
     setAddr(account);
   }
+  async function sendTransaction() {
+    const ethereum = window.ethereum;
+    const params = [
+      {
+        from: addr,
+        to: "null",
+        gas: "null", // 30400
+        gasPrice: "0x9184e72a000", // 10000000000000
+        value: "0x9184e72a", // 2441406250
+        data: "null",
+      },
+    ];
+    ethereum
+      .request({
+        method: "eth_sendTransaction",
+        params,
+      })
+      .then((result) => {
+        // The result varies by by RPC method.
+        // For example, this method will return a transaction hash hexadecimal string on success.
+      })
+      .catch((error) => {
+        // If the request fails, the Promise will reject with an error.
+      });
+  }
   return (
     <div className="App">
       <header className="App-header">
@@ -30,7 +55,7 @@ function App() {
       <body>
         <EstimatedPoolPrize />
         <PoolStats />
-        <Poolbutton />
+        <Poolbutton sendTransaction={() => sendTransaction()} />
       </body>
     </div>
   );

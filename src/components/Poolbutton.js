@@ -18,7 +18,7 @@ export default class Poolbutton extends React.Component {
       // From now on, this should always be true:
       // provider === window.ethereum
       return (
-        <div className="container" onClick={() => {}}>
+        <div className="container" onClick={this.props.sendTransaction}>
           <a id="joinpool">Join Pool</a>
         </div>
       );
