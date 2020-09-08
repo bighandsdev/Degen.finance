@@ -1,39 +1,36 @@
-import React, { useState } from "react";
+import React, { useState, useCallback } from "react";
 import "./Connectwallet.css";
 import { ethers } from "ethers";
 import detectEthereumProvider from "@metamask/detect-provider";
 import Web3 from "web3";
 
-export default function ConnectWallet() {
-  const ethereum = window.ethereum;
-  const [addr, setAddr] = useState("");
-
-  async function getAccount() {
-    const accounts = await ethereum.request({
-      method: "eth_requestAccounts",
-    });
-    const account = accounts[0];
-    setAddr(account);
+export default class ConnectedWallet extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {};
   }
-  if (addr !== "") {
-    return (
-      <div
-        id="ConnectedWallet"
-        className="container"
-        onClick={() => getAccount()}
-      >
-        <a>{addr}</a>
-      </div>
-    );
-  } else {
-    return (
-      <div
-        id="ConnectWallet"
-        className="container"
-        onClick={() => getAccount()}
-      >
-        <a>Connect</a>
-      </div>
-    );
+
+  render() {
+    if (this.props.addr !== "") {
+      return (
+        <div
+          id="ConnectedWallet"
+          className="container"
+          onClick={this.props.getAccount}
+        >
+          <a>{this.props.addr}</a>
+        </div>
+      );
+    } else {
+      return (
+        <div
+          id="ConnectWallet"
+          className="container"
+          onClick={this.props.getAccount}
+        >
+          <a>Connect</a>
+        </div>
+      );
+    }
   }
 }
